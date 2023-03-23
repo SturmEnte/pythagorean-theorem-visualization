@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 ctx.translate(0, canvas.height);
 ctx.scale(1, -1);
 
-let a = 1;
+let a = 2;
 let b = 1;
 
 function render() {
@@ -32,7 +32,7 @@ function render() {
     let path = new Path2D();
     path.moveTo(a + xOff, b + yOff);
     path.lineTo(a + xOff, a + b + yOff);
-    path.lineTo(a + b + xOff, 2 * b + yOff);
+    path.lineTo(a + b + xOff, a + b + yOff);
     ctx.fill(path);
 
     // a²
@@ -47,9 +47,9 @@ function render() {
     ctx.fillStyle = "orange";
     path = new Path2D();
     path.moveTo(a + xOff, b + yOff);
-    path.lineTo(a + b + xOff, 0 + yOff);
-    path.lineTo(a + 2 * b + xOff, a + yOff);
-    path.lineTo(a + b + xOff, 2 * b + yOff);
+    path.lineTo(2 * a + xOff, 0 + yOff);
+    path.lineTo(2 * a + b + xOff, a + yOff);
+    path.lineTo(a + b + xOff, a + b + yOff);
     ctx.fill(path);
 }
 
