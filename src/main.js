@@ -4,14 +4,14 @@ const ctx = canvas.getContext("2d");
 ctx.translate(0, canvas.height);
 ctx.scale(1, -1);
 
-let a = 2;
-let b = 1;
+let aV = 2;
+let bV = 2;
 
 function render() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    let w = 2 * a + b;
-    let h = a + 2 * b;
+    let w = 2 * aV + bV;
+    let h = aV + 2 * bV;
 
     let unit, xOff, yOff;
 
@@ -25,8 +25,8 @@ function render() {
         yOff = 0;
     }
 
-    a = a * unit;
-    b = b * unit;
+    let a = aV * unit;
+    let b = bV * unit;
 
     // Base Trigangle
     let path = new Path2D();
